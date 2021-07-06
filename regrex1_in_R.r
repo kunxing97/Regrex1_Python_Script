@@ -1,10 +1,12 @@
+#!/usr/bin/env Rscript
+
 args <- commandArgs(trailingOnly = TRUE)
 
-mydata = read.csv(args)
+mydata <- read.csv(args[1])
 #mydata = read.csv("regrex1.csv")
 mydata
-xval = mydata$x
-yval = mydata$y
+xval <- mydata$x
+yval <- mydata$y
 
 png("r_orig.png")
 plot(xval, yval, main="Scatterplot in R")
